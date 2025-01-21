@@ -1,0 +1,332 @@
+
+/* universal*/
+body {
+    background-image: url(hue\ pink.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+a{
+  text-decoration: none;
+  opacity: 1;
+}
+
+
+   /* will you be my v ? */
+span {
+    position: relative;
+    font-family: "Sour Gummy", sans-serif;
+    color: white;
+    display: inline-block;
+    font-size: 100px;
+    top: 250px;
+    animation: bounce 5s ease-in-out infinite alternate;
+    
+}
+
+h1 span:nth-child(1) {
+  animation-delay: 0.1s;
+  animation-duration: 0.8s;}
+
+h1 span:nth-child(2) {
+  animation-delay: 0.3s;
+  animation-duration: 0.8s;
+  filter: drop-shadow(5px 5px 20px black);
+}
+
+h1 span:nth-child(3) {
+    animation-delay: 0.5s;
+    animation-duration: 0.8s;
+    filter: drop-shadow(5px 5px 20px black);
+}
+
+h1 span:nth-child(4) {
+    animation-delay: 0.7s;
+    animation-duration: 0.8s;
+    filter: drop-shadow(5px 5px 20px black);
+}
+h1 span:nth-child(5) {
+    animation-delay: 0.9s;
+    animation-duration: 0.8s;
+    filter: drop-shadow(5px 5px 20px black);
+}
+h1 span:nth-child(6) {
+    animation-delay: 1.1s;
+    animation-duration: 0.8s;
+    filter: drop-shadow(5px 5px 20px black);
+}
+h1 span:nth-child(7) {
+    animation-delay: 1.3s;
+    animation-duration: 0.8s;
+    filter: drop-shadow(5px 5px 20px black);
+}
+h1 span:nth-child(8) {
+  animation-delay: 1.5s;
+  animation-duration: 0.8s;
+}
+
+@keyframes bounce {
+    100% {
+        top: 235px;
+    }
+}
+
+.butterfly {
+  height: 120px;
+  left: 70px;
+  bottom: 10px;
+  z-index: 1;
+  filter: drop-shadow(1px 1px 10px black);
+}
+.tulip {
+  height: 120px;
+  right: 30px;
+  top: 40px;
+  z-index: 1;
+  transform: rotate(60deg);
+  filter: drop-shadow(1px 1px 10px black);  
+}
+        /* buttons yes */
+
+.yes {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 35px;
+    padding-left: 95px;
+    border: none;
+    outline: none;
+    color: white;
+    z-index: 0;
+    border-radius: 55px;
+    cursor: pointer;
+    position: relative;
+    top: 380px;
+    left: 600px;
+    font-size: 70px;
+    font-family: "Sour Gummy", sans-serif;
+    background: linear-gradient(90deg, #ff2cdf, #0014ff);
+    filter: drop-shadow(5px 5px 20px purple);
+}
+.yes::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  left: 0;
+  top: 0;
+  border-radius: 55px;
+}
+/* glow */
+.yes::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #a200ff, #ff0080, #00a2ff, #A020F0,
+    #00FFD5, #002BFF, #FF00C8, #6200ff
+  );
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-size: 1000%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height:  calc(100% + 4px);
+  filter: blur(50px);
+  animation: glowing 8s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 55px;
+  opacity: 0;
+  transform: scale(1.3);
+}
+
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+/* hover */
+
+.yes:hover::before {
+  opacity: 1;
+}
+
+.yes:active:after {
+  background: transparent;
+}
+
+.yes:active {
+  color: rgb(32, 219, 15);
+  opacity: 0.7;
+}
+/* buttons no */
+
+.no {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 30px;
+  padding-left: 95px;
+  border: none;
+  outline: none;
+  color: #fff;
+  z-index: 0;
+  border-radius: 55px;
+  cursor: pointer;
+  position: relative;
+  top: 380px;
+  left: 700px;
+  font-size: 70px;
+  font-family: "Sour Gummy", sans-serif;
+  background: linear-gradient(90deg, #ffe53b, #ff2525);
+  filter: drop-shadow(5px 5px 20px #ff2525);
+  
+}
+.no::after {
+content: "";
+z-index: -1;
+position: absolute;
+width: 100%;
+height: 100%;
+background: transparent;
+left: 0;
+top: 0;
+border-radius: 55px;
+}
+/* glow */
+.no::before {
+content: "";
+background: linear-gradient(
+  45deg,
+  orange, red, yellow, #f0203c,
+  #fffb00, #ff5e00, #ff3300, #fff9a6
+);
+position: absolute;
+top: 0px;
+left: 0px;
+background-size: 1000%;
+z-index: -1;
+width: calc(100% + 4px);
+height:  calc(100% + 4px);
+filter: blur(50px);
+animation: glowing 8s linear infinite;
+transition: opacity .3s ease-in-out;
+border-radius: 55px;
+opacity: 0;
+transform: scale(1.3);
+}
+
+@keyframes glowing {
+0% {background-position: 0 0;}
+50% {background-position: 400% 0;}
+100% {background-position: 0 0;}
+}
+
+/* hover */
+.no:hover::before {
+opacity: 1;
+}
+
+.no:active:after {
+background: transparent;
+}
+
+.no:active {
+color: rgb(255, 0, 0);
+opacity: 0.7;
+}
+
+/* yes emojies */
+
+img {
+  z-index: 1;
+  position: relative;
+}
+
+.a {
+  width: 3px;
+  transform: translate(-120px, -40px);
+  opacity: 0;
+}
+.yes:hover .a {
+  transform: translate(50px, -90px) rotate(20deg) scale(50);
+  transition: 500ms;
+  opacity: 1;
+}
+.b {
+  width: 3px;
+  transform: translate(-60px, -8px);
+  opacity: 0;
+}
+.yes:hover .b {
+  transform: translate(-210px, -80px) rotate(-20deg) scale(35);
+  transition: 500ms;
+  opacity: 1; }
+.c {
+  width: 3px;
+  transform: translate(-160px, -8px);
+ opacity: 0;
+  }
+.yes:hover .c {
+  transform: translate(40px, 30px) rotate(20deg) scale(30);
+  transition: 500ms;
+  opacity: 1; }
+.d {
+  width: 2px;
+  transform: translate(-60px, -45px);
+  opacity: 0;
+}
+.yes:hover .d {
+  transform: translate(-240px, 30px) rotate(-20deg) scale(55);
+  transition: 500ms;
+  opacity: 1; }
+
+  /* no emojies */
+
+  .e {
+    width: 5px;
+    transform: translate(-100px, -40px);
+    opacity: 0;
+  }
+  .no:hover .e {
+    transform: translate(40px, -80px) rotate(15deg) scale(42);
+    transition: 500ms;
+    opacity: 1; }
+  .f {
+    width: 3px;
+    transform: translate(-50px, -40px);
+    opacity: 0;
+  }
+  .no:hover .f {
+    transform: translate(-210px, -70px) rotate(-360deg) scale(42);
+    transition: 500ms;
+    opacity: 1; }
+  .g {
+    width: 10px;
+    transform: translate(-90px, -10px);
+    opacity: 0;
+  }
+  .no:hover .g {
+    transform: translate(-220px, 35px) rotate(-20deg) scale(15);
+    transition: 500ms;
+    opacity: 1; }
+  .h {
+    width: 10px;
+    transform: translate(-180px, 0px);
+    opacity: 0;
+  }
+  .no:hover .h {
+    transform: translate(20px, 25px) rotate(10deg) scale(15);
+    transition: 500ms;
+    opacity: 1; }
+
+    /* copy right*/
+p {
+  position: relative;
+  top: 580px;
+  color: white;
+  filter: drop-shadow(10px 10px 10px rgb(0, 0, 0));
+  font-family: "Sour Gummy", sans-serif;
+}
